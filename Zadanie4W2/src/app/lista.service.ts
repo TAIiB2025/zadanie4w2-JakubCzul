@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Usluga } from '../models/usluga';
 import { Observable, of } from 'rxjs';
 import { UslugaBody } from '../models/usluga-body';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListaService {
-  private readonly API_URL = 'https://localhost:5010/api/uslugi';
+  private readonly API_URL = 'http://localhost:5010/api/uslugi';
 
   constructor(private http: HttpClient) {}
 
